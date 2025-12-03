@@ -1,0 +1,100 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg,#ffb6d9,#ffd1f3,#ffe6ff);
+    background-size: 300% 300%;
+    animation: bgflow 8s infinite alternate;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+@keyframes bgflow{
+    0%{background-position:left;}
+    100%{background-position:right;}
+}
+
+.card{
+    background: #fff;
+    width: 450px;
+    margin: 120px auto;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 0 25px rgba(255,100,180,0.4);
+    transition: transform .3s;
+}
+
+.card:hover{
+    transform: scale(1.03);
+}
+
+h1{
+    font-weight: 700;
+    color: #ff4f9a;
+}
+
+.message{
+    margin: 15px 0 25px;
+    font-size: 18px;
+    color:#444;
+    line-height: 1.6;
+}
+
+button{
+    background:#ff6bb5;
+    border:none;
+    padding:12px 25px;
+    border-radius:30px;
+    color:#fff;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+button:hover{
+    background:#ff3f9d;
+    transform: scale(1.1);
+}
+
+.hidden{
+    display:none;
+    margin-top:20px;
+    font-size:18px;
+    color:#ff4f9a;
+    font-weight:600;
+}
+
+/* Floating Hearts Animation */
+.hearts::before,
+.hearts::after{
+    content:"💖 💕 💖 💗 💓 💞";
+    font-size:25px;
+    position:fixed;
+    width:100%;
+    animation: float 6s infinite linear;
+}
+
+@keyframes float{
+    0%{transform:translateY(100vh);}
+    100%{transform:translateY(-100vh);}
+}
+
+/* Music Button */
+.music-btn{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background:#ff92c7;
+    color:#fff;
+    border:none;
+    padding:12px 20px;
+    border-radius:25px;
+    font-size:16px;
+    cursor:pointer;
+    box-shadow:0 0 8px rgba(255,80,150,0.4);
+    transition:0.3s;
+}
+
+.music-btn:hover{
+    transform:scale(1.1);
+    background:#ff66b4;
+}
